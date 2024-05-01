@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "sr25519.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tesseract-one/Sr25519.swift.git",
+      "state" : {
+        "revision" : "30dd8cdedf32970036a84212112313dbf91f56f0",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "tweetnacl-swiftwrap",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bitmark-inc/tweetnacl-swiftwrap.git",
+      "state" : {
+        "revision" : "f8fd111642bf2336b11ef9ea828510693106e954",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "uncommoncrypto.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tesseract-one/UncommonCrypto.swift.git",
+      "state" : {
+        "revision" : "075344faec47dadba98bef6a319e310c98be0820",
+        "version" : "0.2.1"
+      }
+    },
+    {
+      "identity" : "wallet-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/trustwallet/wallet-core",
+      "state" : {
+        "branch" : "master",
+        "revision" : "406abe4b0649a74279b2e7b77a2b10d1bb61520c"
+      }
+    }
+  ],
+  "version" : 2
+}

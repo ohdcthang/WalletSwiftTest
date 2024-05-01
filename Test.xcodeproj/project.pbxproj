@@ -15,6 +15,11 @@
 		D4F4ED0C2BE23D3C00DAC085 /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4ED0B2BE23D3C00DAC085 /* TestTests.swift */; };
 		D4F4ED162BE23D3C00DAC085 /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4ED152BE23D3C00DAC085 /* TestUITests.swift */; };
 		D4F4ED182BE23D3C00DAC085 /* TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4ED172BE23D3C00DAC085 /* TestUITestsLaunchTests.swift */; };
+		D4F4ED252BE23D8D00DAC085 /* AwesomeLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4ED242BE23D8D00DAC085 /* AwesomeLibrary.swift */; };
+		D4F4ED282BE23DB700DAC085 /* WalletCore in Frameworks */ = {isa = PBXBuildFile; productRef = D4F4ED272BE23DB700DAC085 /* WalletCore */; };
+		D4F4ED2B2BE23DF100DAC085 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = D4F4ED2A2BE23DF100DAC085 /* SwiftProtobuf */; };
+		D4F4ED2E2BE23E1800DAC085 /* TweetNacl in Frameworks */ = {isa = PBXBuildFile; productRef = D4F4ED2D2BE23E1800DAC085 /* TweetNacl */; };
+		D4F4ED312BE23E6F00DAC085 /* Sr25519 in Frameworks */ = {isa = PBXBuildFile; productRef = D4F4ED302BE23E6F00DAC085 /* Sr25519 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,7 @@
 		D4F4ED112BE23D3C00DAC085 /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F4ED152BE23D3C00DAC085 /* TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITests.swift; sourceTree = "<group>"; };
 		D4F4ED172BE23D3C00DAC085 /* TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D4F4ED242BE23D8D00DAC085 /* AwesomeLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeLibrary.swift; path = "../../../NightyEight/sdk-wallet-native/ios/AwesomeLibrary.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F4ED2E2BE23E1800DAC085 /* TweetNacl in Frameworks */,
+				D4F4ED282BE23DB700DAC085 /* WalletCore in Frameworks */,
+				D4F4ED312BE23E6F00DAC085 /* Sr25519 in Frameworks */,
+				D4F4ED2B2BE23DF100DAC085 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +90,7 @@
 				D4F4ED0A2BE23D3C00DAC085 /* TestTests */,
 				D4F4ED142BE23D3C00DAC085 /* TestUITests */,
 				D4F4ECF62BE23D3B00DAC085 /* Products */,
+				D4F4ED292BE23DD100DAC085 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				D4F4ECF82BE23D3B00DAC085 /* TestApp.swift */,
+				D4F4ED242BE23D8D00DAC085 /* AwesomeLibrary.swift */,
 				D4F4ECFA2BE23D3B00DAC085 /* ContentView.swift */,
 				D4F4ECFC2BE23D3B00DAC085 /* Item.swift */,
 				D4F4ECFE2BE23D3C00DAC085 /* Assets.xcassets */,
@@ -130,6 +142,13 @@
 			path = TestUITests;
 			sourceTree = "<group>";
 		};
+		D4F4ED292BE23DD100DAC085 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +165,12 @@
 			dependencies = (
 			);
 			name = Test;
+			packageProductDependencies = (
+				D4F4ED272BE23DB700DAC085 /* WalletCore */,
+				D4F4ED2A2BE23DF100DAC085 /* SwiftProtobuf */,
+				D4F4ED2D2BE23E1800DAC085 /* TweetNacl */,
+				D4F4ED302BE23E6F00DAC085 /* Sr25519 */,
+			);
 			productName = Test;
 			productReference = D4F4ECF52BE23D3B00DAC085 /* Test.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +243,11 @@
 				Base,
 			);
 			mainGroup = D4F4ECEC2BE23D3B00DAC085;
+			packageReferences = (
+				D4F4ED262BE23DB700DAC085 /* XCRemoteSwiftPackageReference "wallet-core" */,
+				D4F4ED2C2BE23E1800DAC085 /* XCRemoteSwiftPackageReference "tweetnacl-swiftwrap" */,
+				D4F4ED2F2BE23E6F00DAC085 /* XCRemoteSwiftPackageReference "Sr25519.swift" */,
+			);
 			productRefGroup = D4F4ECF62BE23D3B00DAC085 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4F4ECFB2BE23D3B00DAC085 /* ContentView.swift in Sources */,
+				D4F4ED252BE23D8D00DAC085 /* AwesomeLibrary.swift in Sources */,
 				D4F4ECFD2BE23D3B00DAC085 /* Item.swift in Sources */,
 				D4F4ECF92BE23D3B00DAC085 /* TestApp.swift in Sources */,
 			);
@@ -592,6 +623,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4F4ED262BE23DB700DAC085 /* XCRemoteSwiftPackageReference "wallet-core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/trustwallet/wallet-core";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D4F4ED2C2BE23E1800DAC085 /* XCRemoteSwiftPackageReference "tweetnacl-swiftwrap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bitmark-inc/tweetnacl-swiftwrap.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		D4F4ED2F2BE23E6F00DAC085 /* XCRemoteSwiftPackageReference "Sr25519.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tesseract-one/Sr25519.swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4F4ED272BE23DB700DAC085 /* WalletCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4F4ED262BE23DB700DAC085 /* XCRemoteSwiftPackageReference "wallet-core" */;
+			productName = WalletCore;
+		};
+		D4F4ED2A2BE23DF100DAC085 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4F4ED262BE23DB700DAC085 /* XCRemoteSwiftPackageReference "wallet-core" */;
+			productName = SwiftProtobuf;
+		};
+		D4F4ED2D2BE23E1800DAC085 /* TweetNacl */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4F4ED2C2BE23E1800DAC085 /* XCRemoteSwiftPackageReference "tweetnacl-swiftwrap" */;
+			productName = TweetNacl;
+		};
+		D4F4ED302BE23E6F00DAC085 /* Sr25519 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4F4ED2F2BE23E6F00DAC085 /* XCRemoteSwiftPackageReference "Sr25519.swift" */;
+			productName = Sr25519;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4F4ECED2BE23D3B00DAC085 /* Project object */;
 }
